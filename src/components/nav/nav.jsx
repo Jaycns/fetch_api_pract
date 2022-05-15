@@ -7,26 +7,37 @@ import { BiMessageRoundedDots } from "react-icons/bi";
 import { BsArrowDownCircle } from "react-icons/bs";
 
 export default function Nav() {
-  const [active, setActive] = useState(false);
-  const handleClick = () => setActive(true);
+  const [active, setActive] = useState("");
+  const handleClick = (e) => {
+    setActive(e.target.name);
+    console.log(active);
+  };
   return (
     <div className="navigation">
-      <a href="#home" onClick={handleClick}>
-        <AiOutlineHome className={`icon ${active ? "active-nav" : ""}`} />
-      </a>
-      <a href="#about" onClick={handleClick}>
-        <AiOutlineUser className={`icon ${active ? "active-nav" : ""}`} />
-      </a>
-      <a href="#members" onClick={handleClick}>
-        <TiGroupOutline className={`icon ${active ? "active-nav" : ""}`} />
-      </a>
-      <a href="#contact" onClick={handleClick}>
-        <BiMessageRoundedDots
-          className={`icon ${active ? "active-nav" : ""}`}
+      <a value="home" href="#home" onClick={handleClick}>
+        <AiOutlineHome
+          className={`icon ${active === "home" ? "active-nav" : ""}`}
         />
       </a>
-      <a href="#footer" onClick={handleClick}>
-        <BsArrowDownCircle className={`icon ${active ? "active-nav" : ""}`} />
+      <a href="#about" name="about" onClick={handleClick}>
+        <AiOutlineUser
+          className={`icon ${active === "about" ? "active-nav" : ""}`}
+        />
+      </a>
+      <a href="#members" name="members" onClick={handleClick}>
+        <TiGroupOutline
+          className={`icon ${active === "members" ? "active-nav" : ""}`}
+        />
+      </a>
+      <a href="#contact" name="contact" onClick={handleClick}>
+        <BiMessageRoundedDots
+          className={`icon ${active === "contact" ? "active-nav" : ""}`}
+        />
+      </a>
+      <a href="#footer" name="footer" onClick={handleClick}>
+        <BsArrowDownCircle
+          className={`icon ${active === "footer" ? "active-nav" : ""}`}
+        />
       </a>
     </div>
   );

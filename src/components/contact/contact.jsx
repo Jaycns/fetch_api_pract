@@ -9,7 +9,7 @@ import { AiOutlineDribbble } from "react-icons/ai";
 
 export default function Contact() {
   return (
-    <div className="container contact-container">
+    <div id="contact" className="container contact-container">
       <h3>Contact me</h3>
       <div className="contact-links">
         <a href="https://twitter.com/jaycn_x" className="contact twitter">
