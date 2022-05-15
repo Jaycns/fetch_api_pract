@@ -20,19 +20,19 @@ export default function Footer() {
         </a>
       </h1>
       <div className="social-links">
-        <a href="#">
+        <a href="https://instagram.com">
           <BsInstagram className="social" />
         </a>
-        <a href="#">
+        <a href="https://facebook.com">
           <FaFacebookF className="social" />
         </a>
-        <a href="#">
+        <a href="https://dribble.com">
           <TiSocialDribbble className="social" />
         </a>
-        <a href="#">
+        <a href="https://github.com">
           <TiSocialGithub className="social" />
         </a>
-        <a href="#">
+        <a href="https://youtube.com">
           <TiSocialYoutube className="social" />
         </a>
       </div>
