@@ -73,7 +73,7 @@ I would describe my leadership style as direct, and leading by example. I enjoy 
           How to fetch data from an API using React
         <h4> <span aria-label="People" className="emoji" role="img">👯</span> I’m looking to collaborate on</h4>
         Building a full fledged web/mobile application
-        </p><span className="show" onClick={ handleLess }><a href="#home">show less</a></span></span> : <span className="show" onClick={ clickHandle }>show more</span> }
+        </p><span className="show" onClick={ handleLess }><a href="#home">show less</a></span></span> : <span className="show"  onClick={ clickHandle }>show more</span> }
         </p>
       </h2>
       <Button/>

@@ -153,6 +153,9 @@
 .home-container h2 {
     max-width: 95%;
 }
+.scroll-down {
+    left: 35px;
+}
 }
 .home-container h2 span{
     font-size: 27px;
@@ -206,8 +209,8 @@
 }
 .scroll-down{
     transform: rotate(90deg);
-    position: absolute;
-    right: 0;
+    position: relative;
+    left: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,4 +229,14 @@
 .scroll-down .scroll{
     transform: rotate(-90deg);
     font-size: 100;
+}
+@media screen and (max-width: 500px) {
+    .home-container h2 {
+        max-width: 95%;
+    }
+
+    .scroll-down {
+        left: 60vw;
+        top: -30vw
+    }
 }
