@@ -43,7 +43,8 @@ IT, DevOps (Development Operations) • Intern • Diamond bank
 <h5>August 2019–January 2020</h5>
 Regional customer application Engineering (RCAE), Generator Services GE Power• EID (Early Intern Development) Intern • GE
 <h5>Currently</h5>
-Frontend Web developer using React.js and currently learning Next.js.
+          Frontend Web developer using React.js and Next.js.
+<h5>Summary</h5>
 While at Diamond Bank in August 2018, I witnessed the implementation of a chatbot that would run while using the Diamond bank Mobile App. It’s intended creation was to aid customer in using the app and tending to customer difficulties interactively.
 <p>
 During my time in the DevOps Unit in January 2019, I learnt web development using programming languages such as HTML, CSS, JavaScript and jQuery. 
