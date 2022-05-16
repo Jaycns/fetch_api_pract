@@ -34,6 +34,13 @@ margin-bottom: 80px;
 .footer-container h2:hover{
     background-color: rgba(0,0, 0, 0.062);
 }
+.footer-container p{
+    position: relative;
+    margin: 50px auto;
+    opacity: 0.6;
+
+
+}
 .social-links{
     padding: 10px;
     margin: 20px auto;

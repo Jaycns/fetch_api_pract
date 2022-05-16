@@ -8,7 +8,8 @@ import { TiSocialYoutube } from "react-icons/ti";
 import { TiSocialGithub } from "react-icons/ti";
 
 
-export default function Footer() {
+export default function Footer () {
+    const year = new Date().getFullYear();
   return (
     <div id="footer" className="container footer-container">
       <h1>
@@ -36,6 +37,7 @@ export default function Footer() {
           <TiSocialYoutube className="social" />
         </a>
       </div>
+          <p>Copyright by Jaycn ⓒ {year}</p>
     </div>
   );
 }
