@@ -18,6 +18,7 @@
     align-items: center;
     border-radius: 50%;
     user-select: none;
+    animation: fade-in 1s ease 1 .5s;
 }
 .home-container .logo .main-img{
     position: absolute;
@@ -124,12 +125,14 @@
     width: 300px;
     border-radius: 50%;
     border: 3px solid rgb(108, 161, 197);
-    animation: fade-in 1s ease 1 .5s;
+    
+    
 }
 @keyframes fade-in{
     from {
+        opacity: 0;
         transform: translate(-2000px);
-            opacity: 0;
+            
     }
     to{
         transform: translate(0);
@@ -176,9 +179,15 @@
     margin-bottom: 7px;
     margin-top: 10px;
     font-size: 21px;
+    letter-spacing: 3px;
+    color: var(--color-pri);
 }
 .home-container h2 h5 {
     font-size: 18px;
+}
+.home-container h2 .emoji{
+    border: none;
+    opacity: 1;
 }
 .home-container h2 p{
     font-size: 20px ;

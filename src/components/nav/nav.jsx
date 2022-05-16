@@ -9,33 +9,37 @@ import { BsArrowDownCircle } from "react-icons/bs";
 export default function Nav() {
   const [active, setActive] = useState("");
   const handleClick = (e) => {
-    setActive(e.target.name);
-    console.log(active);
+    setActive(e.target.getAttribute("name"));
   };
   return (
     <div className="navigation">
-      <a value="home" href="#home" onClick={handleClick}>
+      <a href="#home" onClick={handleClick}>
         <AiOutlineHome
+          name="home"
           className={`icon ${active === "home" ? "active-nav" : ""}`}
         />
       </a>
-      <a href="#about" name="about" onClick={handleClick}>
+      <a href="#about" onClick={handleClick}>
         <AiOutlineUser
+          name="about"
           className={`icon ${active === "about" ? "active-nav" : ""}`}
         />
       </a>
-      <a href="#members" name="members" onClick={handleClick}>
+      <a href="#members" onClick={handleClick}>
         <TiGroupOutline
+          name="members"
           className={`icon ${active === "members" ? "active-nav" : ""}`}
         />
       </a>
-      <a href="#contact" name="contact" onClick={handleClick}>
+      <a href="#contact" onClick={handleClick}>
         <BiMessageRoundedDots
+          name="contact"
           className={`icon ${active === "contact" ? "active-nav" : ""}`}
         />
       </a>
-      <a href="#footer" name="footer" onClick={handleClick}>
+      <a href="#footer" onClick={handleClick}>
         <BsArrowDownCircle
+          name="footer"
           className={`icon ${active === "footer" ? "active-nav" : ""}`}
         />
       </a>

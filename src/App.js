@@ -5,9 +5,9 @@ import About from "./components/about/about";
 import Members from "./components/members/members";
 import Contact from "./components/contact/contact";
 import Footer from "./components/footer/footer";
+import React from "react";
 
-
-function App () {
+function App() {
   return (
     <div>
       <div className="bg-circle1"></div>
@@ -15,8 +15,8 @@ function App () {
       <Header />
       <Nav />
       <Home />
-      <About /> 
-       <Members />
+      <About />
+      <Members />
       <Contact />
       <Footer />
     </div>

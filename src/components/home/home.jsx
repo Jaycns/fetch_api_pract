@@ -65,13 +65,12 @@ University Of Nigeria, Nsukka, Enugu
 I try to make eye contact, listen attentively, and speak clearly so that whoever I am talking with understands what I am saying. I also try to keep in mind to be open-minded when I am communicating with others who are of a different background.
 <h4>Leadership</h4>
 I would describe my leadership style as direct, and leading by example. I enjoy delegating tasks and taking the lead on projects, but I also like to stay involved and inspire my team by showing that I'm working hands-on to help them, too.
-<h4>⚡Fun Fact</h4>
+<h4><span aria-label="lightning" className="emoji" role="img">⚡</span>Fun Fact</h4>
 <img src="https://i.imgur.com/maStk86.png" alt="trollface" className="trollface" /> When I am not coding, I'd be watching Anime or playing FIFA or playing Chess.
-          <h4>🔭 I’m currently working on</h4>
+          <h4><span aria-label="scope" role="img" className="emoji">🔭</span> I’m currently working on</h4>
           Mastering React
-          <h4>🌱 I’m currently learning</h4>
           How to fetch data from an API using React
-        <h4>👯 I’m looking to collaborate on</h4>
+        <h4> <span aria-label="People" className="emoji" role="img">👯</span> I’m looking to collaborate on</h4>
         Building a full fledged web/mobile application
         </p><span className="show" onClick={ handleLess }><a href="#home">show less</a></span></span> : <span className="show" onClick={ clickHandle }>show more</span> }
         </p>
