@@ -15,7 +15,6 @@ function App () {
    const [popular, setPopular] = useState([]);
   const [filtered, setFiltered] = useState([]);
   useEffect(() => {
-    popular;
     fetchPopular()
     
         if (activeGenre === 0) {
