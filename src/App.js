@@ -12,10 +12,15 @@ import { motion, AnimatePresence } from "framer-motion"
 
 function App () {
   useEffect(() => {
-    fetchPopular()
-  }
-   ,[]
-  )
+     fetchPopular()
+        if (activeGenre === 0) {
+            setFiltered(popular)
+            return;
+        }
+        const filtered = popular.filter((movie) =>
+            movie.genre_ids.includes(activeGenre));
+        setFiltered(filtered);
+   }, [activeGenre])
   const [popular, setPopular] = useState([]);
   const [filtered, setFiltered] = useState([]);
   const [activeGenre, setActiveGenre] = useState(0);

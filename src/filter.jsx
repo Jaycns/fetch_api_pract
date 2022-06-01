@@ -1,16 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import './App.css'
 
 function Filter ({setActiveGenre, activeGenre, setFiltered, popular}) {
-    useEffect(() => {
-        if (activeGenre === 0) {
-            setFiltered(popular)
-            return;
-        }
-        const filtered = popular.filter((movie) =>
-            movie.genre_ids.includes(activeGenre));
-        setFiltered(filtered);
-   }, [activeGenre])
+    
    
     return (
       <div className="filter-container dark">
