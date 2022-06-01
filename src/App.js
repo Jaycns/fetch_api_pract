@@ -15,6 +15,13 @@ function App () {
    const [popular, setPopular] = useState([]);
   const [filtered, setFiltered] = useState([]);
   useEffect(() => {
+     async function fetchPopular  ()  {
+ const data= await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b8ecb70867e157d08b6ae38c4763ddc5&language=en-US&page=1')
+    const movies = await data.json()
+    setPopular(movies.results);
+    setFiltered(movies.results);
+  
+  }
     fetchPopular()
     
         if (activeGenre === 0) {
@@ -30,14 +37,7 @@ function App () {
   function handleClick() {
     setIsClick(!isClick);
   }
-  async function fetchPopular  ()  {
- const data= await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b8ecb70867e157d08b6ae38c4763ddc5&language=en-US&page=1')
-    const movies = await data.json()
-    setPopular(movies.results);
-    setFiltered(movies.results);
-  
-  
-  }
+ 
   return (
     <div className={ `container ${isClick ? "dark" : ''}` }>
       <div className="image-box"><img className="image" src={isClick ? image: imag} alt= "Jaycn Logo"/></div>
