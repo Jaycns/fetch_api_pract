@@ -1,15 +1,14 @@
-import React, { useState, useRef } from "react";
+import React, {useState} from "react";
 import "./App.css";
 
 function Input({isClick}) {
-  const [number, setNumber] = useState(null);
-  let typer = useRef("");
-  function addComa(e) {
-    if (Number(number)+ 1) {
-      let newNumber = e.target.value;
-      let newVal = newNumber.toString().replace(/,/gi, "");
-      let newVal2 = newVal.split(/(?=(?:\d{3})+$)/).join(",");
-      setNumber(newVal2);
+  const [number, setNumber] = useState('');
+
+  function addComa (e) {
+     let val = e.target.value.replace(/,/g, "");
+    if (!isNaN(Number(val))) {
+       let newVal = val.split(/(?=(?:\d{3})+$)/).join(",");
+      setNumber(newVal);
       }
     else {
         setNumber('');
@@ -21,16 +20,11 @@ function Input({isClick}) {
           <h1>{`${isClick? 'Dark': 'Light'} Theme`}</h1>
           <input
               className="form-input"
-        type="number"
-        inputMode="numeric"
-              ref={ typer }
-              pattern="[0-9]+"
-              //onInput={number.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1')}
-        onFocus={() => (typer.current.type = "text")}
+        type="text"
         onChange={addComa}
         value={number}
         placeholder="Movies"
-        disabled
+      
           ></input>
     </div>
   );

@@ -218,12 +218,22 @@ input:checked ~  .slider::before {
     align-items: flex-start;
     min-height: 30vh;
     margin-top: 80px;
+    transition: all 0.8s;
+    animation: enter 7s 3s;
+}
+@keyframes enter{
+    from { 
+        opacity: 0;
+    }
+    to{
+         opacity: 1;
+    }
 }
 
 .footer-container h1 {
     font-family: "Open Sans Condensed", sans-serif;
-    font-weight: 300;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 13px;
     margin: 0 auto;
     text-align: center;
     text-transform: capitalize;
@@ -253,6 +263,7 @@ input:checked ~  .slider::before {
     position: relative;
     margin: 50px auto;
     opacity: 0.6;
+    font-size: 12px
 
 
 }

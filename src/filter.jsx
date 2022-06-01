@@ -1,7 +1,8 @@
 import React from 'react'
 import './App.css'
 
-function Filter ({setActiveGenre, activeGenre, setFiltered, popular}) {
+function Filter ({setActiveGenre, activeGenre}) {
+ 
     
    
     return (

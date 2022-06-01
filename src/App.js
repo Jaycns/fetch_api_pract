@@ -15,22 +15,25 @@ function App () {
    const [popular, setPopular] = useState([]);
   const [filtered, setFiltered] = useState([]);
   useEffect(() => {
-     async function fetchPopular  ()  {
- const data= await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b8ecb70867e157d08b6ae38c4763ddc5&language=en-US&page=1')
-    const movies = await data.json()
-    setPopular(movies.results);
-    setFiltered(movies.results);
+    async function fetchPopular () {
+      const data = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b8ecb70867e157d08b6ae38c4763ddc5&language=en-US&page=1')
+      const movies = await data.json()
+      setPopular(movies.results);
+      setFiltered(movies.results);
   
-  }
-    fetchPopular()
-    
-        if (activeGenre === 0) {
+    }
+    fetchPopular();
+  }, [])
+   useEffect(() => {
+      if (activeGenre === 0) {
             setFiltered(popular)
             return;
         }
         const filtered = popular.filter((movie) =>
             movie.genre_ids.includes(activeGenre));
-        setFiltered(filtered);
+     setFiltered(filtered);
+     
+       // eslint-disable-next-line react-hooks/exhaustive-deps
    }, [activeGenre])
  
   const [isClick, setIsClick] = useState(false);
