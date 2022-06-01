@@ -11,8 +11,13 @@ import imag from './img/jaycn-logo-white.png'
 import { motion, AnimatePresence } from "framer-motion"
 
 function App () {
+  const [activeGenre, setActiveGenre] = useState(0);
+   const [popular, setPopular] = useState([]);
+  const [filtered, setFiltered] = useState([]);
   useEffect(() => {
-     fetchPopular()
+    popular;
+    fetchPopular()
+    
         if (activeGenre === 0) {
             setFiltered(popular)
             return;
@@ -21,9 +26,7 @@ function App () {
             movie.genre_ids.includes(activeGenre));
         setFiltered(filtered);
    }, [activeGenre])
-  const [popular, setPopular] = useState([]);
-  const [filtered, setFiltered] = useState([]);
-  const [activeGenre, setActiveGenre] = useState(0);
+ 
   const [isClick, setIsClick] = useState(false);
   function handleClick() {
     setIsClick(!isClick);
