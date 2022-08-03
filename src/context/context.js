@@ -36,19 +36,19 @@ export const ContextProvider = (props) => {
       ? document.body.classList.add("dark")
       : document.body.classList.remove("dark");
   }
-  const [number, setNumber] = useState("");
+//   const [number, setNumber] = useState("");
   const [searchMovies, setSearchMovies] = useState("");
   const [searchList, setSearchList] = useState([]);
 
-  function addComa(e) {
-    let val = e.target.value.replace(/,/g, "");
-    if (!isNaN(Number(val))) {
-      let newVal = val.split(/(?=(?:\d{3})+$)/).join(",");
-      setNumber(newVal);
-    } else {
-      setNumber("");
-    }
-  }
+//   function addComa(e) {
+//     let val = e.target.value.replace(/,/g, "");
+//     if (!isNaN(Number(val))) {
+//       let newVal = val.split(/(?=(?:\d{3})+$)/).join(",");
+//       setNumber(newVal);
+//     } else {
+//       setNumber("");
+//     }
+//   }
   function handleChange(e) {
     setSearchMovies(e.target.value);
     if (e.target.value.length > 2) {
