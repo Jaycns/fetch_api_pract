@@ -9,6 +9,9 @@ body{
 
 
 }
+body.dark{
+     background-color: #000;
+}
 code{
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }

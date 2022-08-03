@@ -1,31 +1,39 @@
-import React, {useState} from "react";
+import React, { useContext } from "react";
 import "./App.css";
+import AppContext from "./context/context";
 
-function Input({isClick}) {
-  const [number, setNumber] = useState('');
-
-  function addComa (e) {
-     let val = e.target.value.replace(/,/g, "");
-    if (!isNaN(Number(val))) {
-       let newVal = val.split(/(?=(?:\d{3})+$)/).join(",");
-      setNumber(newVal);
-      }
-    else {
-        setNumber('');
-      }
-  }
-
+function Input() {
+  const { handleChange, searchMovies, handleSubmit, searchList, isClick } =
+    useContext(AppContext);
   return (
-      <div className="inbox">
-          <h1>{`${isClick? 'Dark': 'Light'} Theme`}</h1>
-          <input
-              className="form-input"
-        type="text"
-        onChange={addComa}
-        value={number}
-        placeholder="Movies"
-      
-          ></input>
+    <div className="input-box">
+      <form className="inbox" onSubmit={handleSubmit}>
+        <input
+          className="form-input"
+          type="text"
+          onChange={handleChange}
+          value={searchMovies}
+          placeholder="Movies"
+        ></input>{" "}
+        <div className={ `search-list ${isClick ? "dark" : ""}` }>
+          {searchList.map((movie, index) => {
+            return (
+              <div key={movie.title} className="search-item">
+                <img
+                  src={"https://image.tmdb.org/t/p/w500" + movie.backdrop_path}
+                  alt=""
+                  className="search-image"
+                />
+                {searchMovies > 2 && searchList === [] ? (
+                  <p>No results found!!</p>
+                ) : (
+                  <p>{movie.title}</p>
+                )}
+              </div>
+            );
+          })}
+        </div>
+      </form>
     </div>
   );
 }
