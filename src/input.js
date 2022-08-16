@@ -9,13 +9,13 @@ function Input() {
     <div className="input-box">
       <form className="inbox" onSubmit={handleSubmit}>
         <input
-          className="form-input"
+          className={`form-input ${isClick ? "dark" : ""}`}
           type="text"
           onChange={handleChange}
           value={searchMovies}
           placeholder="Movies"
         ></input>{" "}
-        <div className={ `search-list ${isClick ? "dark" : ""}` }>
+        <div className={`search-list ${isClick ? "dark" : ""}`}>
           {searchList.map((movie, index) => {
             return (
               <div key={movie.title} className="search-item">

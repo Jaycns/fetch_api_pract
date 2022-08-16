@@ -88,7 +88,8 @@ h1 {
 .filter-container {
   display: flex;
   margin: 0.7rem;
-  gap: 1.5rem;
+  margin-bottom: 4rem;
+  gap: 1rem;
 }
 .filter-container button {
   min-width: 5rem;
@@ -129,6 +130,10 @@ h1 {
 .form-input::placeholder {
   color: rgba(65, 98, 168, 0.6);
 }
+.form-input::placeholder.dark {
+  color: rgb(94, 103, 128);
+}
+
 .form-input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
@@ -297,6 +302,7 @@ input:checked ~ .slider::before {
 }
 .input-box {
   position: relative;
+  margin-left: 1rem;
 }
 .inbox {
   position: absolute;
@@ -342,11 +348,23 @@ input:checked ~ .slider::before {
   h1 {
     font-size: 0.44rem;
   }
+  .filter-container {
+    gap: 0rem;
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+  }
+  .inbox {
+    display: none;
+  }
   .filter-container button {
-    font-size: 0.5rem;
-    padding: 0.25rem 0.5rem;
+    font-size: 0.4rem;
+    padding: 0.24rem 0.4rem;
     min-width: 3rem;
     margin: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .form-input {
     display: none;
@@ -376,6 +394,7 @@ input:checked ~ .slider::before {
   .scroll-down {
     top: 15vh;
     left: 45vw;
+    display: none;
   }
   .scroll-down h5 {
     font-size: 5px;
