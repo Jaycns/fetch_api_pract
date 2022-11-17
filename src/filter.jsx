@@ -1,5 +1,4 @@
 import React from "react";
-import Input from "./input.js";
 import "./App.css";
 
 function Filter({ setActiveGenre, activeGenre }) {
@@ -47,7 +46,6 @@ function Filter({ setActiveGenre, activeGenre }) {
       >
         Family
       </button>
-      <Input />
     </div>
   );
 }

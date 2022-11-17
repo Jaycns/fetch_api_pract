@@ -30,25 +30,25 @@ export const ContextProvider = (props) => {
   }, [activeGenre]);
 
   const [isClick, setIsClick] = useState(false);
-  async function handleClick() {
-   await setIsClick(!isClick);
+  function handleClick() {
+    setIsClick(!isClick);
     !isClick
       ? document.body.classList.add("dark")
       : document.body.classList.remove("dark");
   }
-//   const [number, setNumber] = useState("");
+  //   const [number, setNumber] = useState("");
   const [searchMovies, setSearchMovies] = useState("");
   const [searchList, setSearchList] = useState([]);
 
-//   function addComa(e) {
-//     let val = e.target.value.replace(/,/g, "");
-//     if (!isNaN(Number(val))) {
-//       let newVal = val.split(/(?=(?:\d{3})+$)/).join(",");
-//       setNumber(newVal);
-//     } else {
-//       setNumber("");
-//     }
-//   }
+  //   function addComa(e) {
+  //     let val = e.target.value.replace(/,/g, "");
+  //     if (!isNaN(Number(val))) {
+  //       let newVal = val.split(/(?=(?:\d{3})+$)/).join(",");
+  //       setNumber(newVal);
+  //     } else {
+  //       setNumber("");
+  //     }
+  //   }
   function handleChange(e) {
     setSearchMovies(e.target.value);
     if (e.target.value.length > 2) {
@@ -57,6 +57,9 @@ export const ContextProvider = (props) => {
           item.title.toLowerCase().includes(e.target.value.toLowerCase())
         )
       );
+    }
+    else {
+      setSearchList([]);
     }
   }
   function handleSearchClose() {
